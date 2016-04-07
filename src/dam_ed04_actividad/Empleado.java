@@ -53,4 +53,5 @@ public class Empleado {
     public void setDni(String dni) {
         this.dni = dni;
     }
+    
 }
