@@ -18,12 +18,13 @@ public class Main {
 
         operativa_cuenta(miCuenta, cantidad);
     }
-
+    
+    //Cambios para el tercer commit.
     private static void operativa_cuenta(CCuenta cuenta1, float cantidad) {
         try {
             cuenta1.retirar(2300);
         } catch (Exception e) {
-            System.out.print("Fallo al retirar");
+            System.out.print("Fallo al retirar. Inténtelo de nuevo");
         }
         try {
             System.out.println("Ingreso en cuenta");
