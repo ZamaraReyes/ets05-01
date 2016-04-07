@@ -8,7 +8,7 @@ package dam_ed04_actividad;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args,float cantidad) {
         CCuenta miCuenta;
         double saldoActual;
 
@@ -16,14 +16,18 @@ public class Main {
         saldoActual = miCuenta.estado();
         System.out.println("El saldo actual es"+ saldoActual );
 
+        operativa_cuenta(miCuenta, cantidad);
+    }
+
+    private static void operativa_cuenta(CCuenta cuenta1, float cantidad) {
         try {
-            miCuenta.retirar(2300);
+            cuenta1.retirar(2300);
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
         }
         try {
             System.out.println("Ingreso en cuenta");
-            miCuenta.ingresar(695);
+            cuenta1.ingresar(695);
         } catch (Exception e) {
             System.out.print("Fallo al ingresar");
         }
